@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.imagepro">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/eeee"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/eeee"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ImagePro"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ADMIN.LeranAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".NEARME.LocationAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".NEARME.NearmeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ADMIN.AdapterUserLearn"
+            android:exported="false" />
+        <activity
+            android:name=".LearnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ADMIN.AdminLoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".ADMIN.myAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ADMIN.uploadAct"
+            android:exported="false" />
+        <activity
+            android:name=".TEST.UploadDescription"
+            android:exported="false" />
+        <activity
+            android:name=".TEST.ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TEST.LevelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TEST.TestHome"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpalshScreen"
+            android:exported="false" />
+        <activity
+            android:name=".CombineLetterActivity"
+            android:exported="false" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
